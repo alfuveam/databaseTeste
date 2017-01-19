@@ -12,10 +12,10 @@ using namespace std;
 int main()
 {
 	Database rs;
-	Database* db = Database::getDatabase();
-	std::cout << "Mostra valor 1: " << db->getVerdade() << std::endl;;
-	Database* a = Database::getDatabase();
-	std::cout << "Mostra valor 2: " << a->getVerdade() << std::endl;;
+	Database& db = Database::getDatabase();
+	std::cout << "Mostra valor 1: " << db.getVerdade() << std::endl;;
+	Database& a = Database::getDatabase();
+	std::cout << "Mostra valor 2: " << a.getVerdade() << std::endl;;
 	std::cout << "Mostra valor 3: " << rs.getVerdade() << std::endl;;
 	system("PAUSE");
 }

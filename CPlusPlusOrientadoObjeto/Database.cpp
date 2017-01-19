@@ -11,18 +11,19 @@
 //Database::~Database()
 //{
 //}
-Database* Database::instance;
+//Database Database::instance;
 
 //Database* Database::instance = NULL;
-Database* Database::getDatabase() {
-	if (!instance) {
+Database& Database::getDatabase() {
+
 		//PgSQLDatabase *a = new PgSQLDatabase();
-		instance = new PgSQLDatabase();
+	if (true) {
 		std::cout << "Criando:" << std::endl;
+		static PgSQLDatabase instance;
+		return instance;
 	}
-	else {
-		std::cout << "Criado:" << std::endl;
-	}
+	std::cout << "No database option" << std::endl;
+	static Database instance;
 	return instance;
 }
 

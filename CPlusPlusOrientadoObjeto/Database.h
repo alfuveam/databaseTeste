@@ -6,10 +6,10 @@ public:
 	Database() {};
 	virtual ~Database() {};
 		
-		static Database* getDatabase();
+		static Database& getDatabase();
 		virtual std::string getVerdade();
 	protected:
-		static Database* instance;		
+		//static Database instance;		
 private:
 		
 	
